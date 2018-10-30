@@ -1,16 +1,17 @@
-var express = require('express');
-var router = express.Router();
+// var express = require('express');
+// var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  // res.send('respond with a resource');
-  res.json([{
-    id: 1,
-    username: "samsepi0l"
-  }, {
-    id: 2,
-    username: "D0loresH4ze"
-  }]);
-});
+// /* GET users listing. */
+// router.get('/', function(req, res, next) {
+//   // res.send('respond with a resource');
 
-module.exports = router;
+//   let query = knex.select('*').from('users').map(function(row) {return row.name});
+
+
+
+// });
+
+// module.exports = router;
+
+
+

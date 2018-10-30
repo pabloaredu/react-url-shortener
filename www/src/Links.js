@@ -1,5 +1,7 @@
 
 import React, { Component } from 'react';
+import Input from './Input';
+
 
 
 class Links extends Component {
@@ -14,9 +16,10 @@ class Links extends Component {
   render() {
     return (
       <div className="App">
+        <Input />
         <h1 className="App-title">Links</h1>
         {this.state.Links.map(link =>
-          <div key={link.id}>{link.linkname}</div>
+          <div key={link.id}>{link.long_url}</div>
         )}
       </div>
     );
