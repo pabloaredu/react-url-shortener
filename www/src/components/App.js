@@ -6,7 +6,7 @@ import {
 import Users from './Users';
 import Links from './Links';
 import Nav from './Nav';
-import './App.css';
+import '../stylesheets/App.css';
 
 class App extends Component {
   state = {links:[]}
@@ -17,11 +17,12 @@ class App extends Component {
   render() {
     return (
       <Router>
+
         <div>
           <Nav />
-          
+
           <Route exact path="/users" component={Users}/>
-          <Route exact path="/links" component={Links}/>
+          <Route exact path="/" component={Links}/>
         </div>
       </Router>
     );
