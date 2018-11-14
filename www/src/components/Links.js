@@ -1,31 +1,42 @@
 
 import React, { Component } from 'react';
+import { Icon, Table } from 'semantic-ui-react'
 import Input from './Input';
 import Button from './Button';
+import TableRow from './TableRow';
 
 
 class Links extends Component {
-  state = {Links:[]}
+  state = {links:[]}
+
 
   componentDidMount() {
     fetch('/Links')
       .then(res => res.json())
-      .then(Links => this.setState({ Links }));
+      .then(links => this.setState({ links }));
   }
 
   render() {
+    console.log("HELLO THERE", this.state.links)
+
+    const linkRows = this.state.links.map((link) => (
+      <TableRow
+        long_url={link.long_url}
+        short_url={link.short_url}
+        />
+    ));
     return (
-      <div>
       <div className="App-header">
-        <h2 >Shorten your url</h2>
+        <h2 >Shorten your links</h2>
         <Input />
         <Button />
+        <Table celled striped>
+          <Table.Body>
+            {linkRows}
+          </Table.Body>
+        </Table>
       </div>
-        <h1 className="App-title">Links</h1>
-          {this.state.Links.map(link =>
-          <div key={link.id}>{link.short_url}</div>
-          )}
-      </div>
+
     );
   }
 }

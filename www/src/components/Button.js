@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button } from 'semantic-ui-react'
 
-const ButtonExample = () => <Button>Create</Button>
+const ButtonExample = () => <Button>Shorten</Button>
 
 export default ButtonExample
