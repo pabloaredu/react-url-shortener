@@ -19,8 +19,6 @@ class App extends Component {
       <Router>
 
         <div>
-          <Nav />
-
           <Route exact path="/users" component={Users}/>
           <Route exact path="/" component={Links}/>
         </div>

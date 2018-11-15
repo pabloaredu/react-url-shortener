@@ -9,7 +9,7 @@ export default  function TableRow (props) {
       </Table.Cell>
       <Table.Cell collapsing> {props.short_url} </Table.Cell>
       <Table.Cell collapsing textAlign='right'>
-        {props.short_url}
+        {"Button"}
       </Table.Cell>
     </Table.Row>
   )
